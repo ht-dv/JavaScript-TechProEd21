@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="CSS/bootstrap.css" />
+    <link rel="stylesheet" href="CSS/style.css" />
+
+    <title>Dom Manipulation</title>
+  </head>
+  <body>
+    <main>
+      <!--ana içerik-->
+      <div class="container text-center">
+        <h1>Örnekler</h1>
+        <img class="resim" src="img/img2.jpg" alt="" />
+
+        <div class="mt-4">
+          <audio
+            class="ses"
+            src="img/retro-ringtone.mp3"
+            style="width: 0"
+            controls=""
+          ></audio>
+          <button class="btn on btn-outline-warning">Ara</button>
+          <button class="btn off btn-outline-primary">Bağlat</button>
+          <button class="btn speak btn-outline-danger">Konuş</button>
+        </div>
+        <div class="input-div mt-5">
+          <label for="textbox">Bir şeyler yazın.</label>
+          <input class="textbox" type="text" value="" />
+          <!--!sayfa yenilendikce sifirlansin diye bir ustte value="" yaptik-->
+
+          <label for="checkbox">Küçük/Büyük</label>
+          <input class="checkbox" type="checkbox" />
+        </div>
+        <div class="mt-5">
+          <ul class="liste text-start">
+            <li>JavaScript</li>
+            <li>Java</li>
+            <li>Python</li>
+            <li>SQL</li>
+            <li>C++</li>
+          </ul>
+        </div>
+        <div class="text-start mt-5">
+          <input class="dil me-1" type="text" />
+          <button class="btn ekle btn-success">Ekle</button>
+          <button class="btn sil btn-danger">Sil</button>
+        </div>
+      </div>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
