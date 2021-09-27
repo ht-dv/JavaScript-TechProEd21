@@ -22,7 +22,17 @@ document.querySelector(".speak").onclick = function () {
   resim.src = "./img/telfırlat.gif";
 };
 
-//todo Ekle butonuna basildiginda yeni bir <li> ekle
+//? UZUN YOL: Ekle butonuna basildiginda yeni bir <li> ekle
+// // yeni girilen satiri saklamak icin bir li olusturduk.
+//  // const yeniLi = document.createElement("li");
+//  // yeni li icin textnode olusturduk
+//  // const textNode = document.createTextNode(satir.value);
+//  //olusturdugumuz texnode'u yeni li'ye bagladik.
+//  // yeniLi.appendChild(textNode);
+//  // yeni eklenen satiri var olan listeye (ul) baglayalim.
+//  // liste.appendChild(yeniLi);
+
+//todo KISA YOL: Ekle butonuna basildiginda yeni bir <li> ekle
 
 const liste = document.querySelector(".liste");
 document.querySelector(".ekle").onclick = function () {
@@ -36,5 +46,48 @@ document.querySelector(".ekle").onclick = function () {
 //! listeyi 27. satirda fonksiyon disinda yazdigimiz icin burdan tekrar cagirmamiza gerek yok
 
 document.querySelector(".sil").onclick = function () {
-  liste.removeChild(liste.lastChild); //todo Listeye son gireni sil
+  liste.removeChild(liste.lastElementChild); //todo Listeye son gireni sil
+};
+
+// todo Bu yukarıdaki ekleme silme isleminin farkli yolu:
+// todo onkeydown=klavyedeki tusa basip cekince
+
+document.querySelector(".dil").onkeydown = function (tus) {
+  if (tus.keyCode == 13) {
+    // enter:13
+    document.querySelector(".ekle").onclick();
+  } else if (tus.keyCode == 46) {
+    //delete:46
+    document.querySelector(".sil").onclick();
+  }
+};
+
+//* Araya baslik ekleyelim
+const parag = document.querySelector(".forB1");
+parag.innerHTML = `<h1>${"Programlama Dilleri"}</h1>`;
+
+//* Klavyeden bir tusa basildiginda buyusun kuculsun
+document.querySelector(".textbox").onkeyup = function () {
+  const check = document.querySelector(".checkbox");
+  const text = document.querySelector(".textbox");
+  if (check.checked) {
+    text.value = text.value.toUpperCase();
+  } else {
+    text.value = text.value.toLowerCase();
+  }
+};
+
+//* Mouse resmin uzerine geldiginde kukreyen aslan resmi gelsin
+resim.onmouseover = function () {
+  resim.src = "./img/aslan2.jpeg";
+};
+
+/* 2.YOL:
+resim.addEventListener("mouseout", function () {
+  resim.src = "./img/aslan2.jpeg";
+});*/
+
+//* Mouse resmin uzerinden cekilince normal aslan gelsin
+resim.onmouseout = function () {
+  resim.src = "./img/aslan1.jpeg";
 };
