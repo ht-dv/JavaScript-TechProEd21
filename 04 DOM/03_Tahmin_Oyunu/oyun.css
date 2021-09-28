@@ -69,7 +69,7 @@ main {
   align-items: center;
 }
 .tahmin {
-  background: none;
+  background: none; /** Kendi rengi iptal, ortama ayak uydursun*/
   border: 5px solid #eee;
   font-family: inherit;
   color: inherit;

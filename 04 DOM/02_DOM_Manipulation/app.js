@@ -66,6 +66,10 @@ document.querySelector(".dil").onkeydown = function (tus) {
 const parag = document.querySelector(".forB1");
 parag.innerHTML = `<h1>${"Programlama Dilleri"}</h1>`;
 
+//todo SETATTRIBUTE methodu:
+//* document.querySelector(".checkbox").setAttribute("type", "checkbox");
+//todo Index.html'de checkbox class'inin type'ini girmedik diyelim, sonradan girmek istersek boyle gireriz.
+
 //* Klavyeden bir tusa basildiginda buyusun kuculsun
 document.querySelector(".textbox").onkeyup = function () {
   const check = document.querySelector(".checkbox");
